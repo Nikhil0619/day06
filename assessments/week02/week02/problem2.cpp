@@ -15,6 +15,7 @@ int main()
 	{
 		cout << r<<endl;
 		count++;
+		cout<<count<<endl;
 		n = n / 10;
 
 	}
