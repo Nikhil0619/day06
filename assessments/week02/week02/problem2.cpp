@@ -13,7 +13,7 @@ int main()
 
 	if (n || n % 10 == r)
 	{
-		cout << r;
+		cout << r<<endl;
 		count++;
 		n = n / 10;
 
