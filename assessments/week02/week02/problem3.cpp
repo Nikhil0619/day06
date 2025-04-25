@@ -24,11 +24,11 @@ int main()
 		
 	if ((a * a * a) + (b * b * b) + (c * c * c) == n)
 	{
-		cout << "the  number is armstrong number\n";
+		cout << "the  number is armstrong number"<<endl;
 	}
 	else
 	{
-		cout << "the number is not armstrong number\n";
+		cout << "the number is not armstrong number"<<endl;
 	
 	}
 
