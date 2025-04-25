@@ -12,14 +12,16 @@ int main()
 	cin >> n;
 	r = n;
 
-	if (n || n % 10 == r)
+	do
 	{
-	
 		count++;
-		cout<<count<<endl;
+
+		cout << count << endl;
 		n = n / 10;
 
-	}
+	} while (n || n % 10 == r);
+
+
 	cout << "same Digit frequencies is " << count;
 	return 0;
 }
