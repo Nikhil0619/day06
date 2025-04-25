@@ -10,10 +10,11 @@ int main()
 
 	cout << "enter a number" << endl;
 	cin >> n;
+	r = n;
 
 	if (n || n % 10 == r)
 	{
-		cout << r<<endl;
+	
 		count++;
 		cout<<count<<endl;
 		n = n / 10;
