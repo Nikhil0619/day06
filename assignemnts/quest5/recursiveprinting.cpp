@@ -3,16 +3,18 @@ using namespace std;
 
 int main()
 {
+	int n;
+	cout << "Enter a number: ";
+	cin >> n;
 	number(n);
 }
 
 int number(int n)
 {
-	cout << "Enter a number: ";
-	cin >> n;
+	
 	for (int i = 1; i < =n; i++)
 	{
-		cout << " " << n;
+		cout << " " << i;
 		n--;
 	}
 	return 0;
