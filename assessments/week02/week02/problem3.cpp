@@ -1,36 +1,38 @@
-# include<iostream>
-
+#include <iostream>
+#include <cmath>
 using namespace std;
 
-int main()
+bool isArmstrong(int num) {
+    int sum = 0, temp = num, digits = 0;
 
+    // Count the number of digits
+    while (temp != 0) {
+        temp /= 10;
+        digits++;
+    }
 
-{
-	int n;int p;
-	int a, b, c;
+    temp = num;
+    // Calculate the sum of digits raised to the power of 'digits'
+    while (temp != 0) {
+        int digit = temp % 10;
+        sum += pow(digit, digits);
+        temp /= 10;
+    }
 
-	cout << "enter a number" << endl;
+    return sum == num;
+}
 
-	cin >> n;
+int main() {
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
 
-	p = n;
+    if (isArmstrong(num)) {
+        cout << num << " is an Armstrong number!" << endl;
+    }
+    else {
+        cout << num << " is not an Armstrong number." << endl;
+    }
 
-		a = p % 10;
-		p = p / 10;
-		b = p % 10;
-		p = p / 10;
-		c = p % 10;
-
-		
-	if ((a * a * a) + (b * b * b) + (c * c * c) == n)
-	{
-		cout << "the  number is armstrong number"<<endl;
-	}
-	else
-	{
-		cout << "the number is not armstrong number"<<endl;
-	
-	}
-
-	return 0;
+    return 0;
 }
