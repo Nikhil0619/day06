@@ -1,27 +1,22 @@
-# include<iostream>
+#include <iostream>
 using namespace std;
 
-int main()
+void countDigitFrequency(long long num) {
+    int digitCount[10] = { 0 }; // Array for frequency of each digit.
+    int reminder;
+    if (num < 0)
+        num = -1 * num; // Using a negative integer.
+    cout << "Frequency of each digit :\n";
+    while (num) {
+        reminder = num % 10; // Getting reminder.
+        cout << "Digit " << reminder << " occurs " << digitCount[reminder] << "\n";
+    }
+    return;
+}
 
-{
-	int n;
-	int r;
-	int count = 0;
-
-	cout << "enter a number" << endl;
-	cin >> n;
-	r = n;
-
-	do
-	{
-		count++;
-
-		cout << count << endl;
-		n = n / 10;
-
-	} while (n || n % 10 == r);
-
-
-	cout << "same Digit frequencies is " << count;
-	return 0;
+int main() {
+    long long n;
+    cout << "Enter Number for counting: ";
+    cin >> n;
+    countDigitFrequency(n); // Counting frequency.
 }
