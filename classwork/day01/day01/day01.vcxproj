@@ -129,6 +129,14 @@
   <ItemGroup>
     <None Include="readme.md" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="addition.h" />
+    <ClCompile Include="addition.cpp" />
+    <ClCompile Include="subtraction.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="subtraction.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
