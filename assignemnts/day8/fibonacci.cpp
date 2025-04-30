@@ -1,21 +1,20 @@
-//factorail using recursive functions
+// fibonacci using recursive functions
 
-#include <iostream>
-using namespace std;
-int factorial(int n);
-
-int factorial(int n);
+int fib(int x)
 {
-	if (n == 0)
-		return 1;
-	else
-		return n * factorial(n - 1);
-}}
+
+    if (x <= 1)
+        return x;
+
+    else
+        return fib(x - 1) + fib(x - 2);
+}
+
 int main()
 {
 	int n;
 	cout << "Enter a number: ";
 	cin >> n;
-	cout << "Factorial of " << n << " is: " << factorial(n) << endl;
+	cout << "fibonacci series of " << n << " is: " << fib(n) << endl;
 	return 0;
 }
