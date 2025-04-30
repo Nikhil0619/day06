@@ -12,7 +12,7 @@ using namespace std;
 
 
 int main() {
-	float basic, hra, allowance, grosssal = 0.0; //gross salary quest 1
+	float basic, hra, allowance, grosssal; 
 
 	cout << " enter the basic salary" << endl;
 	cin >> basic;
@@ -20,7 +20,7 @@ int main() {
 	hra = basic * (0.04);
 	allowance = basic * (0.02);
 
-	grosssalary = basic + hra + allowance;
+	grosssal = basic + hra + allowance;
 	cout << grosssalary << " is the gross salary";
 
 	return 0;
