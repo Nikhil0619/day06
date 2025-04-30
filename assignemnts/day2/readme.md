@@ -1,0 +1,1 @@
+taught installation of visual studio code and explanation from day 1.
