@@ -1,0 +1,1 @@
+/*Write a program that takes two comma-separated lists of integers as input. For each integer N in the first list, the program needs to find the count of its occurrences (denoted as C) in the second list. The program should print the result N-C for each integer N in the first list.*/
