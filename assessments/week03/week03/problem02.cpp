@@ -8,7 +8,7 @@ using namespace std;
 int main()
 
 {
-	int a[] = { 1,1,2,2,3,3,4,4,5 };
+	int a[] = { 1,1,2,2,3,3,4,5,5 };
 
 	int n = sizeof(a) / sizeof(a[0]);
 
@@ -22,6 +22,7 @@ int main()
 			unique = a[i];
 
 			cout << "the unique element is" << unique << endl;
+			j++;
 			break;
 		}
 		else
