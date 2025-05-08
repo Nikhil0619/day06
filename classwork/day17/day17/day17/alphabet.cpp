@@ -7,7 +7,7 @@ int main()
 
 {
 	char a[100];
-	int count1 = 0;
+	int count = 0;
 	cout << "enter the word\n";
 	cin.getline(a,99);
 
@@ -15,8 +15,8 @@ int main()
 	{
 		if ( (a[i] >= 'a' && a[i] <= 'z') || (a[i] >= 'A' && a[i] <= 'Z'))
 		{
-     count1=count1+1;
-     cout << "The character" <<" "<<a[i] <<" " << "appears" << " "<<count1 << "time" << endl;
+     count=count+1;
+     cout << "The character" <<" "<<a[i] <<" " << "appears" << " "<<count << "time" << endl;
 		}
 	}
 	
