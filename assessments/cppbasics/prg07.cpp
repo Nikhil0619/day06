@@ -20,5 +20,7 @@ int main()
 	}
 
 	cout << "the length of the word is\n" << i << endl;
+
+	return 0;
 }
 
