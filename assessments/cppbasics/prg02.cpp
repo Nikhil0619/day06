@@ -13,18 +13,12 @@ int main()
 	cout << "Enter three numbers \n";
 	cin >> a >> b >> c;
 
-	if (a >b && a>c)
-	{
-		temp = a;
-	}
-	else if (b >a && a>c)
-	{
+	temp = a;
+
+	if (b > temp)
 		temp = b;
-	}
-	else
-	{
+	if (c > temp)
 		temp = c;
-	}
 
 	cout << " the greatest number is " << temp << endl;
 
