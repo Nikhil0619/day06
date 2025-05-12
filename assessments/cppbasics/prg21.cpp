@@ -1,25 +1,26 @@
-//Write a Program to Calculate the Greatest Common Divisor of Two Numbers
+//Write a Program to Calculate the Lowest Common Multiple(LCM) of Two Numbers
 
 #include<iostream>
 using namespace std;
 
 int main()
-
 {
-	int a, b, gcd;
-	int temp;
-	cout << "Enter two numbers";
-	cin >>a >> b;
+	int a, b;
+	int i = 1;
+	cout << "Enter two numbers: ";
+	cin >> a >> b;
 
-	// Calculate GCD using Euclidean algorithm
-	while (b != 0)
+	
+
+	while (true)
 	{
-	 temp = b;
-		b = a % b;
-		a = temp;
+		if (i % a == 0 && i % b == 0)
+		{
+			cout << "LCM is " << i;
+			break;//to exit the loop
+		}
+		i++;
 	}
-	gcd = a;
 
-	cout << "The GCD is: " << gcd << endl;
 	return 0;
 }

@@ -1,40 +1,35 @@
-// Program to check whether a word is palindrome or not
+// Program to check whether a number is palindrome or not
 
-#include<iostream>
-#include<cstring>
+#include <iostream>
 using namespace std;
 
-int main()
-
+int main() 
 {
-	char ch[100];
+    int num, reversedNum= 0, originalNum, remainder;
 
-	bool flag = true;
+    cout << "Enter a number";
+    cin >> num;
 
-	cout << "Enter the word\n";
-	cin.getline(ch, 100);
+    originalNum = num; // Store the original number
 
-	int l = strlen(ch);
+    // Reverse the number
+    while (num != 0) {
+        remainder = num % 10;          // Extract the last digit
+        reversedNum = reversedNum * 10 + remainder; // Build the reversed number
+        num /= 10;                      // Remove the last digit
+    }
 
-	for (int i = 0;i < l / 2;i++)
-	{
-		if (ch[i] != ch[l - i - 1])//compares first half vs second half.
-		{
-			
-			flag = false;
-			cout << "The word is not a palindrome\n";
-			return 0;
-		}
-	}
+    // Check if the reversed number matches the original
+    if (reversedNum==originalNum)
+    {
+        cout << "It is a palindrome" << endl;
+    }
+    else {
+        cout << "Number is Not a palindrome" << endl;
+    }
 
-		if (flag == true)
-		{
-			cout << "The word is a palindrome\n";
-	}
-
-	return 0;
+    return 0;
 }
-
 
 
 
