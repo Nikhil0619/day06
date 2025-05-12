@@ -19,9 +19,9 @@ int main()
 		cout << "The charcater is a vowel!";
 
 	}
-
+	
 	else
-		cout <<" it is not a vowel";
+		cout <<" it is a consonant ";
 
 	return 0;
 }
