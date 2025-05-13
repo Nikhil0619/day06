@@ -9,11 +9,11 @@ int main()
 {
 	char ch;
 
-	cout << "Enter a character :";
+	cout << "Enter a character ";
 
 	cin >> ch;
 
-	if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch >= 'Z'))
+	if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
 	{
 		cout << "The character is an alphabet";
 	}

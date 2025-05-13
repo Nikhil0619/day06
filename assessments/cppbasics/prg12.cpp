@@ -13,7 +13,7 @@ int main()
 
 	cin.getline(ch, 100);
 
-	for (i = 0;ch[i];i++)
+	for (i = 0;ch[i]!='\0';i++)
 	{
 		if (ch[i] != ' ')
 		{
