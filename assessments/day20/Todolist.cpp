@@ -19,7 +19,7 @@ int main()
 	int choice;
 	
 
-	cout << "---Choose a task from the following----\n" << endl;
+	cout << "---Choose a choice from the following----\n" << endl;
 
 
 	cout << "1-Create a Task\n";
@@ -63,28 +63,39 @@ void createTask(int c)
 	
 	bool flag;
 	char  n;
-	int count=0;
+	int count;
 	
 	if (c == 1)
 	{
-		cout << "whats up,what are we planning to do today?\n";
-		cin>>ch;
+		cout << "Whats up,what are you planning to do today?\n";
+		cin >> ch;
 		flag = 1;
-
+		
 
 		if (flag == 1)
-			cout << ch <<"ing \t" << " Task activated!\n";
+			cout << ch <<"\t" <<"Task is activated!\n";
 
-		cout << "Are you done with the task Y/N\n";
+		cout << "Are you done with the task Y/N/y/n\n";
 		cin >> n;
 
-		if (n == 'Y')
+		if (n == 'Y'|| n=='y')
+		
 			cout << "GOOD JOB!";
-		if (n == 'N')
+		if (n == 'N'|| n=='n')
 		{
 			cout << "please hurry up, the time is ticking!";
-		
+			exit(0);
+
 		}
+			cout << "\nDo you want to list the active tasks?if so enter 1\n";
+			cin >> count;
+		
+
+		  if (count==1)
+			listTask(count);
+		else
+			exit(0);
+
 
 	}
 }
@@ -93,7 +104,7 @@ bool deleteTask(int c)
 {
 	int b;
 	char d;
-	cout << "\nWould you like to delete a task today- y/Y?";
+	cout << "\n Would you like to delete a task today- y/Y?";
 	cin >> d;
 
 	if (d != 'Y' && d != 'y')
@@ -115,6 +126,20 @@ bool deleteTask(int c)
 	else
 		return false;
 
+}
+
+void listTask(int n)
+
+{
+	char s;
+	cout << "shall we display the current tasks being done?\n enter choice y/Y\n";
+	cin >> s;
+
+	if (s == 'y' || s == 'Y')
+
+		cout << ch<<" task is active";
+	else
+		cout << "invalid choice";
 }
 
 void searchTask(int c)
