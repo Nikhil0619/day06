@@ -6,17 +6,23 @@
 using namespace std;
 
 char ch[100];
+// function prototypes //
 
 void createTask(int);
 bool deleteTask(int);
 void searchTask(int);
 void listTask(int);
+void checkStatus(int);
 
 
 int main()
 
 {
 	int choice;
+	int id;
+	char name[55];
+
+	cout<<"Enter the id of the "
 	
 
 	cout << "---Choose a choice from the following----\n" << endl;
@@ -34,22 +40,24 @@ int main()
 
 	switch (choice)
 	{case 1: 
-		if (choice == 1)
 			createTask(choice);
 		break;
 	case 2:
-		if (choice == 2)
 			deleteTask(choice);
 		break;
 
 	case 3:
-		if (choice == 3)
 			searchTask(choice);
 		break;
+	case 4: 
+		listTask(choice);
+		break;
 	
-	
+	case 5:
+		checkStatus(choice);
+
 	default:
-		cout << "\nYou have chosen the wrong choice\n";
+		cout << "\nYou have chosen an invalid choice\n";
 		break;
 
 	}
@@ -60,15 +68,19 @@ int main()
 void createTask(int c)
 
 {
-	
+	int counter = 0;
 	bool flag;
 	char  n;
+	char w;
 	int count;
 	
 	if (c == 1)
 	{
 		cout << "Whats up,what are you planning to do today?\n";
 		cin >> ch;
+
+		cout << "Is the task still active";
+		cin >> w;
 		flag = 1;
 		
 
@@ -81,6 +93,7 @@ void createTask(int c)
 		if (n == 'Y'|| n=='y')
 		
 			cout << "GOOD JOB!";
+
 		if (n == 'N'|| n=='n')
 		{
 			cout << "please hurry up, the time is ticking!";
